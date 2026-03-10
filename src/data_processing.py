@@ -22,8 +22,8 @@ class DataProcessing:
         try:
             self.df = pd.read_csv(self.file_path)
             logger.info('Read the data successfully...')
-            logger.info(self.df.shape())
-            logger.info(self.df.head)
+            logger.info(self.df.shape)
+            logger.info(self.df.head())
         except Exception as e:
             logger.error(f'Error while loading the data {e}')
             raise CustomException('Failed to read data', e)
